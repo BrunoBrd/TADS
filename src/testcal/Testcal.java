@@ -32,7 +32,6 @@ public class Testcal {
         JOptionPane.showInputDialog("Entre com o segundo número: ");
         segundoOperador = entrada.nextFloat();
         
-        JOptionPane.showMessageDialog(null,"O resultado e :" +operacao,"Resultado", JOptionPane.INFORMATION_MESSAGE);
         System.out.println();
         
         switch( operacao.charAt(0) )
