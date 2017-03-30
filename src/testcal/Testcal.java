@@ -37,6 +37,7 @@ public class Testcal {
         
         switch( operacao.charAt(0) )
         {
+            
             case '+':
                 System.out.printf("%.2f + %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador + segundoOperador);
                 break;        
