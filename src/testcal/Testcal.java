@@ -37,6 +37,7 @@ public class Testcal {
         
         System.out.println();
       
+        
             switch( operacao.charAt(0) )
             {
 
