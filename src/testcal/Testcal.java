@@ -16,48 +16,59 @@ public class Testcal {
     public static void main(String[] args) {
         // TODO code application logic here
    
-        String imprimir;
-        float primeiroOperador, segundoOperador;
-        String operacao;
         
+        float primeiroOperador, segundoOperador, resultado;
+        String operacao;
+        String retorno;
+        boolean resultadoB;
         
         Scanner entrada = new Scanner(System.in);
         
-        JOptionPane.showInputDialog("Escolha sua operação [+ - * / ]: ");
-        operacao = entrada.nextLine();
         
-        JOptionPane.showInputDialog("Entre com o primeiro número: ");
-        primeiroOperador = entrada.nextFloat();
+        operacao = JOptionPane.showInputDialog("Escolha sua operação [+ - * / ]: ");
         
-        JOptionPane.showInputDialog("Entre com o segundo número: ");
-        segundoOperador = entrada.nextFloat();
+        
+        retorno = JOptionPane.showInputDialog("Entre com o primeiro número: ");
+        primeiroOperador = Float.parseFloat(retorno);
+        retorno = JOptionPane.showInputDialog("Entre com o segundo número: ");
+        
+        segundoOperador = Float.parseFloat(retorno);
+        
         
         System.out.println();
-        
-        switch( operacao.charAt(0) )
-        {
-            
-            case '+':
-                System.out.printf("%.2f + %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador + segundoOperador);
-                break;        
-                
-            case '-':
-                System.out.printf("%.2f - %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador - segundoOperador);
-                break;
-                
-            case '*':
-                System.out.printf("%.2f * %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador * segundoOperador);
-                break;
-                
-            case '/':
-                System.out.printf("%.2f / %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador / segundoOperador);
-                break;
-            
-            default:
-                System.out.printf("Você digitou uma operação inválida.");        
-            
-        }
-        
+      
+            switch( operacao.charAt(0) )
+            {
+
+                case '+':
+                    resultado = primeiroOperador + segundoOperador;
+                    System.out.printf("%.2f + %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador + segundoOperador);
+                    JOptionPane.showMessageDialog(null, "resultado é: " + resultado);
+                    break;        
+
+                case '-':
+                    resultado = primeiroOperador - segundoOperador;
+                    System.out.printf("%.2f - %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador - segundoOperador);
+                    JOptionPane.showMessageDialog(null, "resultado é: " + resultado);
+                    break;
+
+                case '*':
+                    resultado = primeiroOperador * segundoOperador;
+                    System.out.printf("%.2f * %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador * segundoOperador);
+                    JOptionPane.showMessageDialog(null, "resultado é: " + resultado);
+                    break;
+
+                case '/':
+                    resultado = primeiroOperador / segundoOperador;
+                    System.out.printf("%.2f / %.2f = %.2f", primeiroOperador, segundoOperador, primeiroOperador / segundoOperador);
+                    JOptionPane.showMessageDialog(null, "resultado é: " + resultado);
+                    break;
+
+                default:
+                    System.out.printf("Você digitou uma operação inválida.");        
+          
+            }
+      
 
     }
 }
