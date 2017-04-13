@@ -1,7 +1,6 @@
 
 package testcal;
 
-
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
